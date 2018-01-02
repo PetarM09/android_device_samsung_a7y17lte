@@ -48,6 +48,9 @@ TARGET_USES_64_BIT_BINDER := true
 # Power
 BOARD_POWERHINT_HAL := interactive
 
+# Offline charging
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
 # Extracted with libbootimg
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/dtb.img
 BOARD_KERNEL_BASE := 0x10000000
