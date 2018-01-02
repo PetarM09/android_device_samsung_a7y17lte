@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
 # Offmode charger
 PRODUCT_PACKAGES += \
     charger_res_images \
-    cm_charger_res_images
+    charge
 
 
 # call Samsung LSI board support package
