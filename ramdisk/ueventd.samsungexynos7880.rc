@@ -152,8 +152,8 @@
 /dev/ssp_data_injection   0660   system     system
 
 # Fingerprint Sensor
-/dev/vfsspi        0660   system     system
-/dev/esfp0        0660   system     system
+/dev/vfsspi        0666   system     system
+/dev/esfp0        0666   system     system
 
 # sensor sysfs properties
 /sys/devices/virtual/input/input*	poll_delay	0660	system	radio
