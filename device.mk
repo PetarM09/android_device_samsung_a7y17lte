@@ -93,6 +93,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    gatekeeper.exynos7880
+
+# Keymaster
+ PRODUCT_PACKAGES += \
+    keystore.exynos7880
+  
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
