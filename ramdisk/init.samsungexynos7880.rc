@@ -674,8 +674,11 @@ on property:ro.bootmode=charger
     check_fs /dev/block/platform/13540000.dwmmc0/by-name/EFS ext4
     mount ext4 /dev/block/platform/13540000.dwmmc0/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit
 
-on property:ro.bootmode=charger
+service charger /sbin/healthd -c
     class_start sec-charger
+    class charger
+    critical
+    seclabel u:r:healthd:s0
 
 # umount service
 service umount_service /system/bin/umount -D /preload

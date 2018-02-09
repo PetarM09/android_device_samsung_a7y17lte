@@ -93,6 +93,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    gatekeeper.exynos7880
+
+# Keymaster
+ PRODUCT_PACKAGES += \
+    keystore.exynos7880
+  
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
@@ -200,7 +208,7 @@ PRODUCT_PACKAGES += \
 # Offmode charger
 PRODUCT_PACKAGES += \
     charger_res_images \
-    cm_charger_res_images
+    charge
 
 
 # call Samsung LSI board support package

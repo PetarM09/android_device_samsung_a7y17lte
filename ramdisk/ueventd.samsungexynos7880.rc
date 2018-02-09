@@ -50,8 +50,8 @@
 # mscalers
 /dev/video50              0666   media      graphics
 /dev/video51              0666   media      graphics
-/dev/m2m1shot_scaler0     0666   cameraserver graphics
-/dev/m2m1shot_scaler1     0666   cameraserver graphics
+/dev/m2m1shot_scaler0     0660   cameraserver graphics
+/dev/m2m1shot_scaler1     0660   cameraserver graphics
 
 /dev/video55              0666   system     graphics
 /dev/fimg2d               0666   system     graphics
@@ -152,8 +152,8 @@
 /dev/ssp_data_injection   0660   system     system
 
 # Fingerprint Sensor
-/dev/vfsspi        0660   system     system
-/dev/esfp0        0660   system     system
+/dev/vfsspi        0666   system     system
+/dev/esfp0        0666   system     system
 
 # sensor sysfs properties
 /sys/devices/virtual/input/input*	poll_delay	0660	system	radio

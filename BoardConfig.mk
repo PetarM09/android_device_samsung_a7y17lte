@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,6 +44,12 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Binder
 TARGET_USES_64_BIT_BINDER := true
+
+# Power
+BOARD_POWERHINT_HAL := interactive
+
+# Offline charging
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Extracted with libbootimg
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/dtb.img
@@ -151,7 +157,6 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
-SIM_COUNT := 2
 
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
@@ -170,7 +175,7 @@ TARGET_OTA_ASSERT_DEVICE := a7y17lte,a7y17ltexx
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp/twrp.fstab
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
